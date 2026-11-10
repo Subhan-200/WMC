@@ -1,0 +1,120 @@
+/* Einheitliches Box-Modell für alle Elemente */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #f2f6f8;
+    color: #20313b;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+.site-header {
+    padding: 2rem 1.5rem;
+    background-color: #dcecf2;
+    text-align: center;
+}
+
+h1 {
+    display: inline-block;
+    margin: 0 0 1rem;
+    padding: 0.5rem 1rem;
+    background-color: rgba(255, 255, 255, 0.72);
+    color: #173e52;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    color: #145b78;
+}
+
+a:hover,
+a:focus {
+    color: #0b3447;
+}
+
+.page-content {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(14rem, 1fr);
+    gap: 2rem;
+    width: min(100% - 3rem, 60rem);
+    margin: 2rem auto;
+}
+
+article,
+.about-note {
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    background-color: #ffffff;
+}
+
+h2 {
+    color: #24546a;
+}
+
+.profile-picture {
+    float: right;
+    width: min(38%, 12rem);
+    margin: 0 0 1rem 1.5rem;
+    text-align: center;
+}
+
+.profile-picture img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.profile-picture figcaption {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+}
+
+section {
+    margin-top: 2rem;
+}
+
+.about-note {
+    align-self: start;
+    background-color: #e5f0f3;
+}
+
+.site-footer {
+    padding: 1rem 1.5rem;
+    background-color: #203d4b;
+    color: #ffffff;
+    text-align: center;
+}
+
+.site-footer p {
+    margin: 0;
+}
+
+@media (max-width: 42rem) {
+    .page-content {
+        grid-template-columns: 1fr;
+        width: min(100% - 2rem, 38rem);
+        gap: 1rem;
+        margin: 1rem auto;
+    }
+
+    .nav-list {
+        gap: 1rem;
+    }
+
+    .profile-picture {
+        float: none;
+        width: min(100%, 12rem);
+        margin: 0 auto 1.5rem;
+    }
+}
