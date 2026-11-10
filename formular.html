@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ein Beispiel-Formular mit verschiedenen HTML-Eingabeelementen.">
+    <title>Kontaktformular</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <h1>Kontaktformular</h1>
+        <nav aria-label="Hauptnavigation">
+            <ul class="nav-list">
+                <li><a href="index.html">Über mich</a></li>
+                <li><a href="#formular">Zum Formular</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page-content">
+        <article>
+            <h2>Schreib mir</h2>
+            <p>Fülle das Formular aus. Felder mit einem Stern (*) sind Pflichtfelder. Beim Absenden wird dein Mailprogramm geöffnet.</p>
+
+            <!-- TODO: Ersetze die Beispieladresse durch deine eigene E-Mail-Adresse. -->
+            <form id="formular" action="mailto:deine.email@example.com?subject=Nachricht%20von%20meiner%20Website" method="post" enctype="text/plain">
+                <p>
+                    <label for="name">Dein Name *:</label><br>
+                    <input type="text" id="name" name="Name" required minlength="2" maxlength="50" pattern="[A-Za-zÀ-ÖØ-öø-ÿ '-]{2,50}" title="Bitte gib mindestens zwei Buchstaben ein. Leerzeichen, Apostroph und Bindestrich sind erlaubt.">
+                </p>
+
+                <p>
+                    <label for="email">Deine E-Mail-Adresse *:</label><br>
+                    <input type="email" id="email" name="E-Mail" required>
+                </p>
+
+                <fieldset>
+                    <legend>Wie bist du auf meine Website gekommen? *</legend>
+                    <label><input type="radio" name="Quelle" value="Schule" required> Über die Schule</label><br>
+                    <label><input type="radio" name="Quelle" value="Freunde"> Über Freunde</label><br>
+                    <label><input type="radio" name="Quelle" value="Sonstiges"> Anders</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Was interessiert dich? (Mehrfachauswahl möglich)</legend>
+                    <label><input type="checkbox" name="Interesse" value="Webentwicklung"> Webentwicklung</label><br>
+                    <label><input type="checkbox" name="Interesse" value="Java"> Java</label><br>
+                    <label><input type="checkbox" name="Interesse" value="Kochen"> Kochen</label>
+                </fieldset>
+
+                <p>
+                    <label for="thema">Wähle ein Thema:</label><br>
+                    <select id="thema" name="Thema">
+                        <option value="Allgemeine Frage">Allgemeine Frage</option>
+                        <option value="Webentwicklung">Webentwicklung</option>
+                        <option value="Schule">Schule</option>
+                        <option value="Sonstiges">Sonstiges</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="themen">Welche Themen möchtest du besprechen? (Mehrfachauswahl mit Strg-Taste, am Mac mit Cmd-Taste)</label><br>
+                    <select id="themen" name="Weitere Themen" multiple size="4">
+                        <option value="HTML">HTML</option>
+                        <option value="CSS">CSS</option>
+                        <option value="Java">Java</option>
+                        <option value="Kochen">Kochen</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="nachricht">Deine Nachricht *:</label><br>
+                    <textarea id="nachricht" name="Nachricht" rows="6" cols="40" required minlength="10" maxlength="1000" placeholder="Schreib mindestens 10 Zeichen …"></textarea>
+                </p>
+
+                <p>
+                    <label for="datum">Wann hast du Zeit? (freiwillig)</label><br>
+                    <input type="date" id="datum" name="Wunschtermin">
+                </p>
+
+                <p><button type="submit">E-Mail vorbereiten</button></p>
+            </form>
+        </article>
+
+        <aside class="about-note">
+            <h2>Hinweis</h2>
+            <p>Das Formular verwendet <code>mailto:</code>. Dein Browser öffnet dafür ein eingerichtetes Mailprogramm. Prüfe die Nachricht und sende sie dort ab.</p>
+        </aside>
+    </main>
+
+    <footer class="site-footer">
+        <p>© 2026 Subhan Aftab</p>
+    </footer>
+</body>
+</html>
