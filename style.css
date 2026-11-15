@@ -28,7 +28,8 @@ h1 {
 .nav-list {
     display: flex;
     justify-content: center;
-    gap: 1.5rem;
+    gap: 0.5rem 1.5rem;
+    flex-wrap: wrap;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -109,7 +110,7 @@ section {
     }
 
     .nav-list {
-        gap: 1rem;
+        gap: 0.5rem 1rem;
     }
 
     .profile-picture {
@@ -117,4 +118,13 @@ section {
         width: min(100%, 12rem);
         margin: 0 auto 1.5rem;
     }
+}
+
+#formular fieldset {
+    min-inline-size: 0;
+    margin: 1rem 0;
+}
+
+#formular :is(input, select, textarea) {
+    max-width: 100%;
 }

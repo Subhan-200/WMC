@@ -23,11 +23,10 @@
             <h2>Schreib mir</h2>
             <p>Fülle das Formular aus. Felder mit einem Stern (*) sind Pflichtfelder. Beim Absenden wird dein Mailprogramm geöffnet.</p>
 
-            <!-- TODO: Ersetze die Beispieladresse durch deine eigene E-Mail-Adresse. -->
-            <form id="formular" action="mailto:deine.email@example.com?subject=Nachricht%20von%20meiner%20Website" method="post" enctype="text/plain">
+            <form id="formular" action="mailto:aft250756@spengergasse.at?subject=Nachricht%20von%20meiner%20Website" method="post" enctype="text/plain">
                 <p>
                     <label for="name">Dein Name *:</label><br>
-                    <input type="text" id="name" name="Name" required minlength="2" maxlength="50" pattern="[A-Za-zÀ-ÖØ-öø-ÿ '-]{2,50}" title="Bitte gib mindestens zwei Buchstaben ein. Leerzeichen, Apostroph und Bindestrich sind erlaubt.">
+                    <input type="text" id="name" name="Name" required minlength="2" maxlength="50" pattern="\p{L}[\p{L}\p{M} '\-]{1,49}" title="Bitte gib mindestens zwei Buchstaben ein. Leerzeichen, Apostroph und Bindestrich sind erlaubt.">
                 </p>
 
                 <p>
